@@ -1,0 +1,10 @@
+--- # This is my  first YAML playbook for Ansible
+ - hosts: webservers
+   user: ansadmin
+   become: yes					(Header)
+   connection: ssh
+   gather_facts: yes
+  
+   tasks:
+ - name: Install Git
+        yum:name=git state=installed
