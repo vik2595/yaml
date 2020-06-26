@@ -7,7 +7,9 @@
   
   tasks:
    - name: Install Git
+     become_method: su
      yum: name=git state=installed
 
    - name: Install Httpd
+     become_method: su
      yum: name=httpd state=installed
